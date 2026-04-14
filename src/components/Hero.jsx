@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import DnaHelix from './DnaHelix';
+import profilePic from '../assets/profile.jpg';
 import './Hero.css';
 
 const StatBadge = ({ value, label, delay }) => {
@@ -86,8 +87,7 @@ const Hero = () => {
             transition={{ duration: 1 }}
           >
             <div className="profile-photo">
-              {/* Replace with actual image when available */}
-              <div className="photo-placeholder"></div>
+              <img src={profilePic} alt="Dr. Tanvi Jain" className="profile-img" />
             </div>
             
             {expertise.map((tag, i) => (

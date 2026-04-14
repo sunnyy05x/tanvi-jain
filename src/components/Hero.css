@@ -162,10 +162,10 @@
   background: var(--color-surface);
 }
 
-.photo-placeholder {
+.profile-img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #ccc, #999);
+  object-fit: cover;
 }
 
 .expertise-tag {
