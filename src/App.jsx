@@ -44,28 +44,15 @@ const Lab = () => (
         <h2 className="section-title">The Lab</h2>
         <p className="section-subtitle">A collaborative space for bold scientific inquiry</p>
       </div>
-      <div className="lab-grid">
-        <div className="lab-main">
-          <div className="team-grid">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="team-card">
-                <div className="team-photo"></div>
-                <h4>Researcher {i}</h4>
-                <p>PhD Student</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="lab-cta">
-          <div className="cta-card">
-            <h3>Join the Lab</h3>
-            <p>We are always looking for passionate PhD and M.Tech students to join our research efforts.</p>
-            <ul className="cta-positions">
-              <li>• PhD Position: Microfluidics & Cancer Diagnostics</li>
-              <li>• Research Fellow: Tissue Scaffold Fabrication</li>
-            </ul>
-            <a href="#contact" className="btn btn-primary">Apply Now →</a>
-          </div>
+      <div className="lab-cta-container">
+        <div className="cta-card">
+          <h3>Join the Lab</h3>
+          <p>We are always looking for passionate PhD and M.Tech students to join our research efforts.</p>
+          <ul className="cta-positions" style={{ listStyle: 'none', padding: 0, margin: 'var(--spacing-md) 0' }}>
+            <li>• PhD Position: Microfluidics & Cancer Diagnostics</li>
+            <li>• Research Fellow: Tissue Scaffold Fabrication</li>
+          </ul>
+          <a href="#contact" className="btn btn-primary">Apply Now →</a>
         </div>
       </div>
     </div>
