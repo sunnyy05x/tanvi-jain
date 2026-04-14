@@ -40,8 +40,8 @@ const StatBadge = ({ value, label, delay }) => {
 
 const Hero = () => {
   const expertise = [
-    '#BioMEMS', '#TissueEngineering', '#Biosensors', 
-    '#GenomicDiagnostics', '#Bioinformatics'
+    '#Biopolymers', '#Biomaterials', '#StemCells', 
+    '#Nanobiotechnology', '#Nanoinformatics'
   ];
 
   return (
@@ -57,11 +57,11 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="eyebrow">PROFESSOR · BIOMEDICAL ENGINEERING & BIOTECHNOLOGY</span>
-            <h1 className="hero-title">Prof. Tanvi Jain</h1>
-            <p className="hero-subtitle">BML Munjal University</p>
+            <span className="eyebrow">BIOMEDICAL ENGINEERING & BIOTECHNOLOGY</span>
+            <h1 className="hero-title">Dr. Tanvi Jain</h1>
+            <p className="hero-subtitle">Assistant Professor & Researcher</p>
             <p className="hero-tagline">
-              "Bridging molecular science and medical innovation — one breakthrough at a time."
+              "Pioneering research in biomaterials, nanoinformatics, and tissue engineering."
             </p>
             
             <div className="hero-ctas">
@@ -70,10 +70,10 @@ const Hero = () => {
             </div>
 
             <div className="hero-stats">
-              <StatBadge value="42+" label="Papers Published" delay={0.5} />
-              <StatBadge value="680+" label="Citations" delay={0.6} />
-              <StatBadge value="18" label="Students Supervised" delay={0.7} />
-              <StatBadge value="8" label="Years at BML Munjal" delay={0.8} />
+              <StatBadge value="14+" label="Years Exp" delay={0.5} />
+              <StatBadge value="2" label="Patents" delay={0.6} />
+              <StatBadge value="250+" label="Citations" delay={0.7} />
+              <StatBadge value="6" label="PhD Scholars" delay={0.8} />
             </div>
           </motion.div>
         </div>

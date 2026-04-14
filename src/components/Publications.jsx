@@ -53,39 +53,39 @@ const Publications = () => {
   const allPublications = [
     {
       type: 'Journal Articles',
-      year: '2023',
-      title: 'Electrochemical Biosensor for Rapid COVID-19 Detection',
-      authors: 'Kumar, R., Tanvi Jain, & Sharma, P.',
-      journal: 'Biosensors & Bioelectronics',
-      citations: 45,
-      doi: '10.1016/j.bios.2023.115000'
+      year: '2025',
+      title: 'Unveiling the Antimicrobial Power of Bacillus kochii from marigold',
+      authors: 'Shraddha Prakash, Tanvi Jain',
+      journal: 'Journal of Applied Bioanalysis',
+      citations: 'Scopus Indexed',
+      doi: '10.17145/jab.25.001'
     },
     {
       type: 'Journal Articles',
-      year: '2022',
-      title: '3D Bioprinted Cartilage Scaffold with Alginate-GelMA Hydrogel',
-      authors: 'Singh, A., Tanvi Jain, & Verma, S.',
-      journal: 'Biomaterials Science',
-      citations: 32,
-      doi: '10.1039/D2BM00000X'
-    },
-    {
-      type: 'Conference Proceedings',
-      year: '2023',
-      title: 'Microfluidic Platform for Circulating Tumor Cell Isolation',
-      authors: 'Tanvi Jain, & Gupta, M.',
-      journal: 'Lab on a Chip (Conference Track)',
-      citations: 12,
-      doi: '10.1039/D3LC00000Y'
+      year: '2024',
+      title: 'Network Pharmacology Reveals Key Targets and Pathways of Madhuca longifolia for Potential Alzheimer\'s',
+      authors: 'Noopur Khare, Megha Barot, Sachidanand Singh, Tanvi Jain',
+      journal: 'Cell Biochemistry and Biophysics',
+      citations: 'SCI Indexed',
+      doi: '10.1007/s12013-024-01292-x'
     },
     {
       type: 'Journal Articles',
-      year: '2021',
-      title: 'COMSOL-Based Simulation of Blood Flow in Stenotic Arteries',
-      authors: 'Mishra, K., & Tanvi Jain',
-      journal: 'Medical Engineering & Physics',
-      citations: 28,
-      doi: '10.1016/j.medengphy.2021.103000'
+      year: '2024',
+      title: 'Unveiling a Comprehensive Multi-epitope Subunit Vaccine Strategy Against Salmonella subsp.',
+      authors: 'Yamini Chand, Tanvi Jain, Sachidanand Singh',
+      journal: 'Cell Biochem Biophys',
+      citations: 'SCI Indexed',
+      doi: '10.1007/s12013-024-01293-y'
+    },
+    {
+      type: 'Journal Articles',
+      year: '2016',
+      title: 'Carbon dots: Chemistry, properties and applications',
+      authors: 'P Bhartiya, A Singh, H Kumar, Tanvi Jain, BK Singh, PK Dutta',
+      journal: 'Journal of the Indian Chemical Society',
+      citations: '42 Citations',
+      doi: '10.1002/chin.201639255'
     }
   ];
 

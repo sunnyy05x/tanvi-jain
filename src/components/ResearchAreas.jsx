@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Activity, Zap, Dna, Atom, Network } from 'lucide-react';
+import { Microscope, Dna, Users } from 'lucide-react';
 import './ResearchAreas.css';
 
 const AreaCard = ({ icon: Icon, title, description, delay }) => (
@@ -23,34 +23,19 @@ const AreaCard = ({ icon: Icon, title, description, delay }) => (
 const ResearchAreas = () => {
   const areas = [
     {
-      icon: Cpu,
-      title: 'BioMEMS & Microfluidics',
-      description: 'Fabricating micro-scale devices for diagnostics, drug delivery, and point-of-care testing using PDMS and silicon lithography.'
-    },
-    {
-      icon: Activity,
-      title: 'Tissue Engineering',
-      description: 'Designing biocompatible scaffolds and hydrogels for regenerative medicine applications in bone, cartilage, and skin repair.'
-    },
-    {
-      icon: Zap,
-      title: 'Biosensors & Diagnostics',
-      description: 'Developing electrochemical and optical biosensors for rapid, label-free detection of biomarkers and pathogens.'
+      icon: Microscope,
+      title: 'Patents Granted (2)',
+      description: 'AI Based Electroactive Polymer Biosensor Device and Nanolipoidal Systems for Skin Cancer.'
     },
     {
       icon: Dna,
-      title: 'Genomic Diagnostics & Bioinformatics',
-      description: 'Leveraging PCR, sequencing, and computational tools to decode genetic information for disease profiling and precision medicine.'
+      title: 'Biomaterials & Tissue Eng.',
+      description: 'Working on biopolymers, wound healing, and advanced scaffolds.'
     },
     {
-      icon: Atom,
-      title: 'Nanobiotechnology',
-      description: 'Engineering nanoparticles and nanostructures for targeted drug delivery, imaging contrast agents, and anti-cancer therapy.'
-    },
-    {
-      icon: Network,
-      title: 'Computational Biomedical Modeling',
-      description: 'Using COMSOL and MATLAB to simulate biological systems, device performance, and fluid dynamics in physiological environments.'
+      icon: Users,
+      title: 'Academic Leadership',
+      description: 'Guided 24 B.Tech, 4 M.Tech projects, and 6 PhD scholars.'
     }
   ];
 

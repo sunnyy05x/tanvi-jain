@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
-        <a href="#" className="logo">Prof. Tanvi Jain</a>
+        <a href="#" className="logo">Dr. Tanvi Jain</a>
         
         <div className="desktop-nav">
           {navLinks.map((link) => (

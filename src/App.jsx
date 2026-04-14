@@ -80,10 +80,9 @@ const Awards = () => (
       </div>
       <div className="awards-timeline">
         {[
-          { year: '2024', name: 'Best Research Paper Award', body: 'IEEE EMBC Conference' },
-          { year: '2023', name: 'DST-SERB Research Grant', body: '₹25 Lakhs' },
-          { year: '2022', name: 'Young Investigator Award', body: 'ISBE' },
-          { year: '2021', name: 'Excellence in Teaching', body: 'BML Munjal University' }
+          { year: '2021-25', name: 'Teaching Learning Award', body: 'Recognized for innovation in teaching methodology across multiple academic sessions.' },
+          { year: '2015', name: 'Best Paper Presentation', body: 'National Seminar on Recent Advances in Polymer Science and Technology.' },
+          { year: '2014', name: 'Indian Chemical Society Award', body: 'For outstanding research on Sulfated chitin nanoparticles.' }
         ].map((award, i) => (
           <div key={i} className="award-item">
             <div className="award-year">{award.year}</div>
@@ -113,8 +112,8 @@ function App() {
       <footer className="footer">
         <div className="container footer-content">
           <div className="footer-brand">
-            <h2 className="footer-logo">Prof. Tanvi Jain</h2>
-            <p>BML Munjal University · Biomedical Engineering</p>
+            <h2 className="footer-logo">Dr. Tanvi Jain</h2>
+            <p>Assistant Professor & Researcher</p>
           </div>
           <div className="footer-links">
             <a href="#about">About</a>

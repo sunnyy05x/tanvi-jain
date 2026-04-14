@@ -22,17 +22,16 @@ const TimelineItem = ({ year, title, institution, delay }) => (
 
 const About = () => {
   const expertise = [
-    'MEMS Fabrication', 'Cell Culture', 'PCR & qPCR', 
-    'COMSOL Simulation', 'Bioreactor Design', 'Flow Cytometry', 
-    'Western Blot', 'Nanomaterial Synthesis'
+    'Biopolymers', 'Biomaterials', 'Stem Cells & Tissue Eng', 
+    'Nanobiotechnology', 'Nanoinformatics', 'Drug Delivery'
   ];
 
   const timeline = [
-    { year: '2024 — Current', title: 'Professor', institution: 'BML Munjal University' },
-    { year: '2019 — 2024', title: 'Associate Professor', institution: 'BML Munjal University' },
-    { year: '2014 — 2019', title: 'Assistant Professor', institution: 'Top Tier Institute' },
-    { year: '2013', title: 'PhD in Biomedical Engineering', institution: 'Prestigious University' },
-    { year: '2008', title: 'M.Tech in Biotechnology', institution: 'Leading Technical Institute' }
+    { year: '2026 — Present', title: 'Assistant Professor', institution: 'BML Munjal University, Gurugram' },
+    { year: '2012 — 2026', title: 'Professor & Dep. Controller of Exam', institution: 'Shri Ramswaroop Memorial University (SRMU)' },
+    { year: '2012 — 2016', title: 'Ph.D. Biomedical Engineering', institution: 'MNNIT Allahabad' },
+    { year: '2010 — 2012', title: 'M.Tech Biomedical Engineering', institution: 'MNNIT Allahabad' },
+    { year: '2005 — 2009', title: 'B.Tech Biotechnology', institution: 'Uttar Pradesh Technical University' }
   ];
 
   return (
@@ -73,10 +72,7 @@ const About = () => {
         <div className="about-grid">
           <div className="about-main">
             <p className="bio-text">
-              "My research sits at the intersection of molecular biology and engineering design — 
-              developing diagnostic tools, biosensors, and tissue constructs that can move from 
-              bench to bedside. At BML Munjal, I believe in training engineers who think like 
-              scientists and scientists who build like engineers."
+              Dedicated researcher and educator focused on biomaterials, tissue engineering, and translational research. Extending expertise to administrative leadership and program development. My research sits at the intersection of molecular biology and engineering design — developing diagnostic tools, biosensors, and tissue constructs that can move from bench to bedside.
             </p>
             
             <div className="expertise-grid">
@@ -86,10 +82,9 @@ const About = () => {
             </div>
 
             <div className="institution-logos">
-              {/* Logos would go here */}
               <div className="logo-placeholder">BML Munjal University</div>
-              <div className="logo-placeholder">Collaborator 1</div>
-              <div className="logo-placeholder">Collaborator 2</div>
+              <div className="logo-placeholder">SRMU</div>
+              <div className="logo-placeholder">MNNIT Allahabad</div>
             </div>
           </div>
 
