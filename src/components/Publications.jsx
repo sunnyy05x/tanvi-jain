@@ -37,9 +37,11 @@ const PublicationRow = ({ year, title, authors, journal, citations, doi, delay }
           <span className="citation-count">{citations}</span>
           <span className="citation-label">Citations</span>
         </div>
-        <a href={`https://doi.org/${doi}`} target="_blank" rel="noopener noreferrer" className="doi-link" aria-label="View DOI">
-          <ExternalLink size={18} />
-        </a>
+        {doi && (
+          <a href={`https://doi.org/${doi}`} target="_blank" rel="noopener noreferrer" className="doi-link" aria-label="View DOI">
+            <ExternalLink size={18} />
+          </a>
+        )}
       </div>
     </motion.div>
   );
@@ -58,7 +60,7 @@ const Publications = () => {
       authors: 'Shraddha Prakash, Tanvi Jain',
       journal: 'Journal of Applied Bioanalysis',
       citations: 'Scopus Indexed',
-      doi: '10.17145/jab.25.001'
+      doi: '10.25258/ijddt.16.3s.87'
     },
     {
       type: 'Journal Articles',
@@ -67,7 +69,7 @@ const Publications = () => {
       authors: 'Noopur Khare, Megha Barot, Sachidanand Singh, Tanvi Jain',
       journal: 'Cell Biochemistry and Biophysics',
       citations: 'SCI Indexed',
-      doi: '10.1007/s12013-024-01292-x'
+      doi: '10.1007/s12013-024-01389-4'
     },
     {
       type: 'Journal Articles',
@@ -76,7 +78,7 @@ const Publications = () => {
       authors: 'Yamini Chand, Tanvi Jain, Sachidanand Singh',
       journal: 'Cell Biochem Biophys',
       citations: 'SCI Indexed',
-      doi: '10.1007/s12013-024-01293-y'
+      doi: '10.1007/s12013-024-01407-5'
     },
     {
       type: 'Journal Articles',
@@ -86,6 +88,7 @@ const Publications = () => {
       journal: 'Journal of the Indian Chemical Society',
       citations: '42 Citations',
       doi: '10.1002/chin.201639255'
+    },
     {
       type: 'Journal Articles',
       year: '2024',
@@ -93,7 +96,7 @@ const Publications = () => {
       authors: 'Yamini Chand, Tanvi Jain, Sachidanand Singh',
       journal: 'Cell Biochem Biophys',
       citations: 'Book Chapter',
-      doi: '10.1007/s12013-024-01300-w'
+      doi: ''
     }
   ];
 
