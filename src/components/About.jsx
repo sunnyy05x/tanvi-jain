@@ -101,6 +101,24 @@ const About = () => {
             ))}
           </div>
         </div>
+
+        <div className="admin-leadership" style={{ marginTop: 'var(--spacing-3xl)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: 'var(--spacing-lg)', color: 'var(--color-primary)' }}>Administrative Leadership</h3>
+          <div style={{ display: 'grid', gap: 'var(--spacing-xl)', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>Deputy Controller of Examination</h4>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '15px' }}>Promoted to this role at SRMU. Led the initiation of an online examination system and policy preparation during the COVID-19 pandemic.</p>
+            </div>
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>NAAC Steering Committee</h4>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '15px' }}>Served as a core committee member for Criteria III and V at the University level, handling research paper compilation and data handling.</p>
+            </div>
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: 'var(--spacing-xs)' }}>Institutional Committees</h4>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '15px' }}>Active member of the Women's Grievance Redressal Cell (WGRC) and served as Chief Editor of the SRMU Newsletter (SRMU COMPASS).</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

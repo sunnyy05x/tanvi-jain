@@ -28,7 +28,7 @@ const Contact = () => {
               <div className="success-message">
                 <div className="success-icon">✓</div>
                 <h3>Message Sent</h3>
-                <p>Thank you for reaching out. Prof. Tanvi Jain will get back to you soon.</p>
+                <p>Thank you for reaching out. Dr. Tanvi Jain will get back to you soon.</p>
                 <button 
                   className="btn btn-ghost" 
                   style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}
@@ -81,15 +81,23 @@ const Contact = () => {
               <Mail className="info-icon" size={24} />
               <div className="info-text">
                 <h4>Email</h4>
-                <p>tanvi.jain@bml.edu.in</p>
+                <p>tanvijain87@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <Globe className="info-icon" size={24} />
+              <div className="info-text">
+                <h4>ORCID</h4>
+                <p><a href="https://orcid.org/0000-0002-1817-9577" target="_blank" rel="noopener noreferrer">0000-0002-1817-9577</a></p>
               </div>
             </div>
 
             <div className="info-item">
               <Clock className="info-icon" size={24} />
               <div className="info-text">
-                <h4>Office Hours</h4>
-                <p>Tuesday & Thursday<br />2:00 PM – 4:00 PM</p>
+                <h4>Phone</h4>
+                <p>+91 9559355403</p>
               </div>
             </div>
 

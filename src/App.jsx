@@ -81,6 +81,7 @@ const Awards = () => (
       <div className="awards-timeline">
         {[
           { year: '2021-25', name: 'Teaching Learning Award', body: 'Recognized for innovation in teaching methodology across multiple academic sessions.' },
+          { year: 'Present', name: 'Chief Editor — SRMU COMPASS', body: 'Serving as Chief Editor of the official SRMU Newsletter, driving institutional communication.' },
           { year: '2015', name: 'Best Paper Presentation', body: 'National Seminar on Recent Advances in Polymer Science and Technology.' },
           { year: '2014', name: 'Indian Chemical Society Award', body: 'For outstanding research on Sulfated chitin nanoparticles.' }
         ].map((award, i) => (

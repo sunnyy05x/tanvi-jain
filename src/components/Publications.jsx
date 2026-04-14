@@ -86,6 +86,41 @@ const Publications = () => {
       journal: 'Journal of the Indian Chemical Society',
       citations: '42 Citations',
       doi: '10.1002/chin.201639255'
+    {
+      type: 'Journal Articles',
+      year: '2024',
+      title: 'Investigation of the Antibacterial Activity, Antibiofilm Properties and Phytochemical Composition of Poly-Herbal Extracts...',
+      authors: 'Yamini Chand, Tanvi Jain, Sachidanand Singh',
+      journal: 'Cell Biochem Biophys',
+      citations: 'Book Chapter',
+      doi: '10.1007/s12013-024-01300-w'
+    }
+  ];
+
+  const foundationalPapers = [
+    {
+      year: 'Foundational',
+      title: 'Carbon dots: Chemistry, properties and applications',
+      authors: 'P Bhartiya, A Singh, H Kumar, Tanvi Jain, BK Singh, PK Dutta',
+      journal: 'Journal of the Indian Chemical Society',
+      citations: '42+',
+      doi: '10.1002/chin.201639255'
+    },
+    {
+      year: 'Foundational',
+      title: 'Dibutyrylchitin nanoparticles as novel drug carrier',
+      authors: 'T Jain, S Kumar, PK Dutta',
+      journal: 'International Journal of Biological Macromolecules',
+      citations: 'Highly Cited',
+      doi: '10.1016/j.ijbiomac.2015.01.001'
+    },
+    {
+      year: 'Foundational',
+      title: 'Theranostics: a way of modern medical diagnostics and the role of chitosan',
+      authors: 'T Jain, PK Dutta',
+      journal: 'Journal of Molecular and Genetic Medicine',
+      citations: 'Foundational',
+      doi: '10.4172/1747-0862.1000100'
     }
   ];
 
@@ -137,6 +172,21 @@ const Publications = () => {
               No results — try a different filter
             </div>
           )}
+        </div>
+
+        <div className="section-head" style={{ marginTop: 'var(--spacing-3xl)' }}>
+          <h2 className="section-title">Highly Cited Foundational Papers</h2>
+          <p className="section-subtitle">Pioneering research works in biomaterials and diagnostics</p>
+        </div>
+
+        <div className="pub-list">
+          {foundationalPapers.map((pub, i) => (
+            <PublicationRow 
+              key={pub.title} 
+              {...pub} 
+              delay={i * 0.05}
+            />
+          ))}
         </div>
 
         <div className="pub-actions">
