@@ -1,11 +1,47 @@
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0A4D68 0%, #073D53 50%, #05C3A3 100%);
+  background: linear-gradient(
+    135deg,
+    #6B5CA5 0%,
+    #8B7BC7 25%,
+    #7ECEC1 55%,
+    #B8E8D8 80%,
+    #F4A5B8 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-shift 12s ease-in-out infinite;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   padding-top: 80px;
+}
+
+/* Floating bio-molecules background decoration */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(199, 184, 234, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: bio-float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(244, 165, 184, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: bio-float 10s ease-in-out infinite 2s;
+  pointer-events: none;
 }
 
 .hero-dna-container {
@@ -15,7 +51,7 @@
   width: 50%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.5; /* Increased from 0.3 */
+  opacity: 0.35;
 }
 
 .hero-container {
@@ -34,18 +70,24 @@
 }
 
 .eyebrow {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.12em;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.14em;
   margin-bottom: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-title {
-  font-size: 40px;
+  font-size: 42px;
   color: white;
   margin-bottom: var(--spacing-sm);
+  text-shadow: 0 2px 20px rgba(107, 92, 165, 0.3);
 }
 
 @media (min-width: 1024px) {
@@ -57,17 +99,18 @@
 .hero-subtitle {
   font-size: 20px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--spacing-lg);
 }
 
 .hero-tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.95);
   max-width: 600px;
   margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
 }
 
 .hero-ctas {
@@ -77,31 +120,38 @@
 }
 
 .btn {
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
+  padding: 12px 28px;
+  border-radius: var(--radius-lg);
   font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 15px;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
   background: white;
   color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(107, 92, 165, 0.2);
 }
 
 .btn-primary:hover {
-  background: var(--color-surface);
-  transform: translateY(-2px);
+  background: var(--color-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(107, 92, 165, 0.3);
 }
 
 .btn-ghost {
-  border: 1px solid white;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
   color: white;
+  backdrop-filter: blur(8px);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  border-color: white;
 }
 
 .hero-stats {
@@ -117,25 +167,39 @@
 }
 
 .stat-badge {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: var(--spacing-md) var(--spacing-sm);
   border-radius: var(--radius-md);
   text-align: center;
+  transition: all 0.3s ease;
+  animation: glow-breathe 4s ease-in-out infinite;
+}
+
+.stat-badge:nth-child(2) { animation-delay: 1s; }
+.stat-badge:nth-child(3) { animation-delay: 2s; }
+.stat-badge:nth-child(4) { animation-delay: 3s; }
+
+.stat-badge:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-4px);
 }
 
 .stat-value {
   font-family: var(--font-mono);
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 26px;
+  font-weight: 500;
   color: white;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.1);
 }
 
 .stat-label {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-top: 4px;
 }
 
@@ -148,18 +212,46 @@
 
 .profile-container {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
+}
+
+/* Orbiting molecule dots around profile */
+.profile-container::before,
+.profile-container::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+}
+
+.profile-container::before {
+  background: var(--color-accent);
+  animation: orbit 8s linear infinite;
+  box-shadow: 0 0 12px rgba(244, 165, 184, 0.6);
+}
+
+.profile-container::after {
+  background: var(--color-amber);
+  animation: orbit 12s linear infinite reverse;
+  box-shadow: 0 0 12px rgba(245, 208, 142, 0.6);
 }
 
 .profile-photo {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 48px rgba(107, 92, 165, 0.25), 0 0 0 8px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   background: var(--color-surface);
+  position: relative;
+  z-index: 2;
 }
 
 .profile-img {
@@ -170,21 +262,31 @@
 
 .expertise-tag {
   position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: white;
-  padding: 6px 14px;
-  border-radius: var(--radius-lg);
-  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
   white-space: nowrap;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 3;
+  transition: all 0.3s ease;
+  animation: bio-float 6s ease-in-out infinite;
 }
 
-.tag-0 { top: 10%; left: -20%; }
-.tag-1 { top: -5%; right: -10%; }
-.tag-2 { bottom: 20%; right: -30%; }
-.tag-3 { bottom: -10%; left: 0%; }
-.tag-4 { top: 40%; right: -25%; }
+.expertise-tag:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.tag-0 { top: 8%; left: -22%; animation-delay: 0s; }
+.tag-1 { top: -8%; right: -12%; animation-delay: 1s; }
+.tag-2 { bottom: 18%; right: -32%; animation-delay: 2s; }
+.tag-3 { bottom: -12%; left: -2%; animation-delay: 3s; }
+.tag-4 { top: 38%; right: -28%; animation-delay: 4s; }
 
 @media (max-width: 768px) {
   .expertise-tag {

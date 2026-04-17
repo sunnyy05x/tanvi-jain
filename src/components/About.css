@@ -1,5 +1,21 @@
 .about {
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle floating cell decorations */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -8%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(184, 232, 216, 0.2) 0%, transparent 70%);
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  animation: bio-float 14s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .section-head {
@@ -8,11 +24,22 @@
 
 .eyebrow.dark {
   color: var(--color-secondary);
+  background: rgba(126, 206, 193, 0.1);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
 }
 
 .section-title {
   font-size: 32px;
-  margin-top: 8px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (min-width: 1024px) {
@@ -34,8 +61,8 @@
 }
 
 .bio-text {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.85;
   color: var(--color-text);
   margin-bottom: var(--spacing-2xl);
 }
@@ -48,12 +75,27 @@
 }
 
 .expertise-pill {
-  background: #E8F4F8;
+  background: linear-gradient(135deg, rgba(199, 184, 234, 0.2) 0%, rgba(126, 206, 193, 0.15) 100%);
   color: var(--color-primary);
-  padding: 8px 16px;
-  border-radius: var(--radius-lg);
-  font-size: 14px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
   font-weight: 500;
+  border: 1px solid rgba(199, 184, 234, 0.3);
+  transition: all 0.3s ease;
+  animation: cell-pulse 5s ease-in-out infinite;
+}
+
+.expertise-pill:nth-child(2) { animation-delay: 0.5s; }
+.expertise-pill:nth-child(3) { animation-delay: 1s; }
+.expertise-pill:nth-child(4) { animation-delay: 1.5s; }
+.expertise-pill:nth-child(5) { animation-delay: 2s; }
+.expertise-pill:nth-child(6) { animation-delay: 2.5s; }
+
+.expertise-pill:hover {
+  background: linear-gradient(135deg, rgba(199, 184, 234, 0.35) 0%, rgba(126, 206, 193, 0.3) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .institution-logos {
@@ -66,14 +108,20 @@
 .logo-placeholder {
   font-family: var(--font-display);
   font-weight: 600;
+  font-size: 15px;
   color: var(--color-text-muted);
-  filter: grayscale(1);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(126, 206, 193, 0.06);
+  border: 1px solid var(--color-border);
   transition: all 0.3s ease;
 }
 
 .logo-placeholder:hover {
-  filter: grayscale(0);
   color: var(--color-primary);
+  background: rgba(126, 206, 193, 0.12);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Timeline */
@@ -88,7 +136,13 @@
   bottom: 0;
   left: 0;
   width: 2px;
-  border-left: 2px dashed rgba(5, 195, 163, 0.3);
+  background: linear-gradient(
+    to bottom,
+    var(--color-secondary),
+    var(--color-lavender),
+    var(--color-accent)
+  );
+  border-radius: 2px;
 }
 
 .timeline-item {
@@ -98,30 +152,39 @@
 
 .timeline-dot {
   position: absolute;
-  left: -24px;
+  left: -25px;
   top: 8px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: var(--color-secondary);
   border-radius: 50%;
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 3px var(--color-secondary), 0 0 12px rgba(126, 206, 193, 0.3);
+  animation: cell-pulse 4s ease-in-out infinite;
 }
+
+.timeline-item:nth-child(2) .timeline-dot { animation-delay: 0.5s; background: var(--color-lavender); box-shadow: 0 0 0 3px var(--color-lavender), 0 0 12px rgba(199, 184, 234, 0.3); }
+.timeline-item:nth-child(3) .timeline-dot { animation-delay: 1s; background: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent), 0 0 12px rgba(244, 165, 184, 0.3); }
+.timeline-item:nth-child(4) .timeline-dot { animation-delay: 1.5s; }
+.timeline-item:nth-child(5) .timeline-dot { animation-delay: 2s; background: var(--color-lavender); box-shadow: 0 0 0 3px var(--color-lavender), 0 0 12px rgba(199, 184, 234, 0.3); }
 
 .timeline-year {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-secondary);
   font-weight: 600;
   margin-bottom: 4px;
+  letter-spacing: 0.02em;
 }
 
 .timeline-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--color-text);
 }
 
 .timeline-institution {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--color-text-muted);
 }
   
@@ -129,7 +192,7 @@
   width: 300px;  
   height: 40px;  
   margin-top: var(--spacing-md);  
-  opacity: 0.8;  
+  opacity: 0.7;  
 }  
   
 .about-dna-divider svg {  

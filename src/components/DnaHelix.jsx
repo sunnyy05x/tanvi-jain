@@ -26,7 +26,7 @@ const DnaHelix = ({
   const strandAPoints = generateStrandPoints(0);
   const strandBPoints = generateStrandPoints(Math.PI);
 
-  const baseColors = ['#05C3A3', '#E85D4A', '#F4A83A', '#2ECC8B']; // Aqua, Coral, Amber, Green
+  const baseColors = ['#C7B8EA', '#F4A5B8', '#F9C9A3', '#7ECEC1']; // Lavender, Rose, Peach, Mint
 
   return (
     <div 

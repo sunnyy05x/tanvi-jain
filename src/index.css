@@ -1,20 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  --color-primary: #0A4D68;
-  --color-secondary: #05C3A3;
-  --color-accent: #C94030;
-  --color-amber: #F4A83A;
-  --color-bg: #F5F7FA;
-  --color-surface: #ECEEF2;
-  --color-text: #1C2437;
-  --color-text-muted: #5A6478;
-  --color-success: #2ECC8B;
+  /* ── Pastel Bioengineering Palette ── */
+  --color-primary: #6B5CA5;       /* Soft violet */
+  --color-primary-light: #8B7BC7;
+  --color-primary-dark: #524688;
+  --color-secondary: #7ECEC1;     /* Pastel teal / mint */
+  --color-secondary-light: #A8E0D7;
+  --color-accent: #F4A5B8;        /* Soft rose */
+  --color-accent-warm: #F9C9A3;   /* Pastel peach */
+  --color-amber: #F5D08E;         /* Warm buttercup */
+  --color-lavender: #C7B8EA;      /* Light lavender */
+  --color-mint: #B8E8D8;          /* Cool mint */
+  --color-blush: #FADCE5;         /* Pale blush */
+  --color-sky: #B3D9F2;           /* Pastel sky */
 
+  --color-bg: #FAF8FF;            /* Near-white with violet tint */
+  --color-surface: #F0EDF7;       /* Lavender surface */
+  --color-surface-alt: #E8F5F2;   /* Mint surface */
+  --color-text: #2D2A3E;          /* Deep plum text */
+  --color-text-muted: #7A7494;    /* Muted violet-grey */
+  --color-success: #7BD4B8;       /* Pastel green */
+  --color-border: #E4DFF0;        /* Soft border */
+
+  /* ── Typography ── */
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
+  /* ── Spacing ── */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -24,15 +38,19 @@
   --spacing-3xl: 64px;
   --spacing-4xl: 96px;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
+  /* ── Radii ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
   --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 2px 8px rgba(10, 77, 104, 0.05);
-  --shadow-md: 0 4px 12px rgba(10, 77, 104, 0.08);
-  --shadow-lg: 0 8px 32px rgba(10, 77, 104, 0.12);
-  --shadow-xl: 0 20px 60px rgba(10, 77, 104, 0.20);
+  /* ── Shadows (tinted with primary) ── */
+  --shadow-sm: 0 2px 8px rgba(107, 92, 165, 0.06);
+  --shadow-md: 0 4px 16px rgba(107, 92, 165, 0.08);
+  --shadow-lg: 0 8px 32px rgba(107, 92, 165, 0.12);
+  --shadow-xl: 0 20px 60px rgba(107, 92, 165, 0.16);
+  --shadow-glow: 0 0 20px rgba(126, 206, 193, 0.25);
 }
 
 * {
@@ -51,6 +69,7 @@ body {
   color: var(--color-text);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 button {
@@ -91,9 +110,14 @@ ul {
 
 section {
   padding: var(--spacing-4xl) 0;
+  position: relative;
 }
 
-/* Animations */
+/* ═══════════════════════════════════════════
+   BIOENGINEERING ANIMATIONS
+   ═══════════════════════════════════════════ */
+
+/* DNA helix rotation */
 @keyframes dna-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -103,6 +127,67 @@ section {
   animation: dna-rotate 20s linear infinite;
   opacity: 0.06;
   pointer-events: none;
+}
+
+/* Floating cell / molecule animation */
+@keyframes bio-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(5deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+  75% { transform: translateY(-25px) rotate(2deg); }
+}
+
+/* Gentle pulse — simulates a living cell */
+@keyframes cell-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* Flowing gradient background shift */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subtle shimmer for glassmorphism cards */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Molecule orbit */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+/* Breathing glow for accents */
+@keyframes glow-breathe {
+  0%, 100% { box-shadow: 0 0 8px rgba(126, 206, 193, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(126, 206, 193, 0.45); }
+}
+
+/* Fade-up utility for scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Soft rotate for bio-elements */
+@keyframes gentle-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {

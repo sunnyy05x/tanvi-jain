@@ -58,13 +58,13 @@ const About = () => {
                 const y2 = 20 + 15 * Math.sin(i * 0.8 + Math.PI);
                 return (
                   <g key={i}>
-                    <line x1={x} y1={y1} x2={x} y2={y2} stroke="#05C3A3" strokeWidth="1.5" opacity="0.4" />
-                    <circle cx={x} cy={y1} r="3" fill="#05C3A3" filter="url(#about-glow)" />
-                    <circle cx={x} cy={y2} r="3" fill="#E85D4A" filter="url(#about-glow)" />
+                    <line x1={x} y1={y1} x2={x} y2={y2} stroke="#C7B8EA" strokeWidth="1.5" opacity="0.4" />
+                    <circle cx={x} cy={y1} r="3" fill="#7ECEC1" filter="url(#about-glow)" />
+                    <circle cx={x} cy={y2} r="3" fill="#F4A5B8" filter="url(#about-glow)" />
                   </g>
                 );
               })}
-              <path d="M 10 20 Q 20 5, 30 20 T 50 20 T 70 20 T 90 20 T 110 20 T 130 20 T 150 20 T 170 20 T 190 20 T 210 20 T 230 20 T 250 20 T 270 20 T 290 20" fill="none" stroke="#05C3A3" strokeWidth="1" opacity="0.2" />
+              <path d="M 10 20 Q 20 5, 30 20 T 50 20 T 70 20 T 90 20 T 110 20 T 130 20 T 150 20 T 170 20 T 190 20 T 210 20 T 230 20 T 250 20 T 270 20 T 290 20" fill="none" stroke="#C7B8EA" strokeWidth="1" opacity="0.3" />
             </svg>
           </div>
         </div>
