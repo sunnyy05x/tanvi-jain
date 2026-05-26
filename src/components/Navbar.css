@@ -12,12 +12,12 @@
 }
 
 .navbar.scrolled {
-  background: rgba(250, 248, 255, 0.85);
+  background: rgba(10, 15, 28, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   height: 68px;
-  box-shadow: 0 1px 24px rgba(107, 92, 165, 0.08);
-  border-bottom: 1px solid rgba(199, 184, 234, 0.2);
+  box-shadow: 0 1px 24px rgba(0, 212, 170, 0.08);
+  border-bottom: 1px solid rgba(0, 212, 170, 0.2);
 }
 
 .nav-content {
@@ -131,14 +131,14 @@
   right: -340px;
   width: 340px;
   height: 100vh;
-  background: rgba(250, 248, 255, 0.95);
+  background: rgba(10, 15, 28, 0.95);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   z-index: 1100;
   padding: var(--spacing-xl);
   transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: -12px 0 40px rgba(107, 92, 165, 0.12);
-  border-left: 1px solid rgba(199, 184, 234, 0.2);
+  box-shadow: -12px 0 40px rgba(0, 212, 170, 0.12);
+  border-left: 1px solid rgba(0, 212, 170, 0.2);
 }
 
 .mobile-drawer.open {
@@ -190,7 +190,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(45, 42, 62, 0.25);
+  background: rgba(5, 10, 20, 0.5);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 1050;

@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* ── Pastel Bioengineering Palette ── */
-  --color-primary: #6B5CA5;       /* Soft violet */
-  --color-primary-light: #8B7BC7;
-  --color-primary-dark: #524688;
-  --color-secondary: #7ECEC1;     /* Pastel teal / mint */
-  --color-secondary-light: #A8E0D7;
-  --color-accent: #F4A5B8;        /* Soft rose */
-  --color-accent-warm: #F9C9A3;   /* Pastel peach */
-  --color-amber: #F5D08E;         /* Warm buttercup */
-  --color-lavender: #C7B8EA;      /* Light lavender */
-  --color-mint: #B8E8D8;          /* Cool mint */
-  --color-blush: #FADCE5;         /* Pale blush */
-  --color-sky: #B3D9F2;           /* Pastel sky */
+  /* ── Nano-Computational Dark Palette ── */
+  --color-primary: #0F2847;       /* Deep navy */
+  --color-primary-light: #1A3A5C;
+  --color-primary-dark: #0A1B30;
+  --color-secondary: #00D4AA;     /* Nano-green / computational teal */
+  --color-secondary-light: #33E0BF;
+  --color-accent: #6C63FF;        /* Electric indigo */
+  --color-accent-warm: #FF6B9D;   /* Neon pink */
+  --color-amber: #FFD93D;         /* Golden compute */
+  --color-lavender: #7B68EE;      /* Medium slate blue */
+  --color-mint: #00E5A0;          /* Bright nano-green */
+  --color-blush: #FF7EB3;         /* Soft neon pink */
+  --color-sky: #4FC3F7;           /* Circuit blue */
 
-  --color-bg: #FAF8FF;            /* Near-white with violet tint */
-  --color-surface: #F0EDF7;       /* Lavender surface */
-  --color-surface-alt: #E8F5F2;   /* Mint surface */
-  --color-text: #2D2A3E;          /* Deep plum text */
-  --color-text-muted: #7A7494;    /* Muted violet-grey */
-  --color-success: #7BD4B8;       /* Pastel green */
-  --color-border: #E4DFF0;        /* Soft border */
+  --color-bg: #0B0F1A;            /* Deep space dark */
+  --color-surface: #111827;       /* Dark surface */
+  --color-surface-alt: #1A2332;   /* Slightly lighter dark */
+  --color-text: #E8ECF1;          /* Light text */
+  --color-text-muted: #8B95A5;    /* Muted grey-blue */
+  --color-success: #00D4AA;       /* Nano green */
+  --color-border: #1E2A3A;        /* Dark border */
 
   /* ── Typography ── */
   --font-display: 'Playfair Display', serif;
@@ -45,12 +45,12 @@
   --radius-xl: 32px;
   --radius-full: 9999px;
 
-  /* ── Shadows (tinted with primary) ── */
-  --shadow-sm: 0 2px 8px rgba(107, 92, 165, 0.06);
-  --shadow-md: 0 4px 16px rgba(107, 92, 165, 0.08);
-  --shadow-lg: 0 8px 32px rgba(107, 92, 165, 0.12);
-  --shadow-xl: 0 20px 60px rgba(107, 92, 165, 0.16);
-  --shadow-glow: 0 0 20px rgba(126, 206, 193, 0.25);
+  /* ── Shadows (tinted with nano-green) ── */
+  --shadow-sm: 0 2px 8px rgba(0, 212, 170, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 212, 170, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 212, 170, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 212, 170, 0.16);
+  --shadow-glow: 0 0 20px rgba(0, 212, 170, 0.25);
 }
 
 * {
@@ -75,7 +75,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   line-height: 1.2;
 }
 
@@ -114,10 +114,10 @@ section {
 }
 
 /* ═══════════════════════════════════════════
-   BIOENGINEERING ANIMATIONS
+   NANO-COMPUTATIONAL ANIMATIONS
    ═══════════════════════════════════════════ */
 
-/* DNA helix rotation */
+/* Lattice rotation */
 @keyframes dna-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -129,7 +129,7 @@ section {
   pointer-events: none;
 }
 
-/* Floating cell / molecule animation */
+/* Floating nanoparticle animation */
 @keyframes bio-float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   25% { transform: translateY(-20px) rotate(5deg); }
@@ -137,7 +137,7 @@ section {
   75% { transform: translateY(-25px) rotate(2deg); }
 }
 
-/* Gentle pulse — simulates a living cell */
+/* Pulse — simulates a nanoparticle */
 @keyframes cell-pulse {
   0%, 100% { transform: scale(1); opacity: 0.6; }
   50% { transform: scale(1.15); opacity: 1; }
@@ -156,7 +156,7 @@ section {
   100% { background-position: 200% 0; }
 }
 
-/* Molecule orbit */
+/* Electron orbit */
 @keyframes orbit {
   from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
   to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
@@ -164,8 +164,8 @@ section {
 
 /* Breathing glow for accents */
 @keyframes glow-breathe {
-  0%, 100% { box-shadow: 0 0 8px rgba(126, 206, 193, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(126, 206, 193, 0.45); }
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 212, 170, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 170, 0.45); }
 }
 
 /* Fade-up utility for scroll reveals */
@@ -184,7 +184,7 @@ section {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Soft rotate for bio-elements */
+/* Gentle spin for nano-elements */
 @keyframes gentle-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

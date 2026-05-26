@@ -75,13 +75,13 @@
 }
 
 .expertise-pill {
-  background: linear-gradient(135deg, rgba(199, 184, 234, 0.2) 0%, rgba(126, 206, 193, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 170, 0.2) 0%, rgba(108, 99, 255, 0.15) 100%);
   color: var(--color-primary);
   padding: 8px 18px;
   border-radius: var(--radius-full);
   font-size: 13px;
   font-weight: 500;
-  border: 1px solid rgba(199, 184, 234, 0.3);
+  border: 1px solid rgba(0, 212, 170, 0.3);
   transition: all 0.3s ease;
   animation: cell-pulse 5s ease-in-out infinite;
 }
@@ -93,7 +93,7 @@
 .expertise-pill:nth-child(6) { animation-delay: 2.5s; }
 
 .expertise-pill:hover {
-  background: linear-gradient(135deg, rgba(199, 184, 234, 0.35) 0%, rgba(126, 206, 193, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 170, 0.35) 0%, rgba(108, 99, 255, 0.3) 100%);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -139,8 +139,8 @@
   background: linear-gradient(
     to bottom,
     var(--color-secondary),
-    var(--color-lavender),
-    var(--color-accent)
+    var(--color-accent),
+    var(--color-sky)
   );
   border-radius: 2px;
 }
@@ -163,10 +163,10 @@
   animation: cell-pulse 4s ease-in-out infinite;
 }
 
-.timeline-item:nth-child(2) .timeline-dot { animation-delay: 0.5s; background: var(--color-lavender); box-shadow: 0 0 0 3px var(--color-lavender), 0 0 12px rgba(199, 184, 234, 0.3); }
-.timeline-item:nth-child(3) .timeline-dot { animation-delay: 1s; background: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent), 0 0 12px rgba(244, 165, 184, 0.3); }
+.timeline-item:nth-child(2) .timeline-dot { animation-delay: 0.5s; background: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent), 0 0 12px rgba(108, 99, 255, 0.3); }
+.timeline-item:nth-child(3) .timeline-dot { animation-delay: 1s; background: var(--color-sky); box-shadow: 0 0 0 3px var(--color-sky), 0 0 12px rgba(79, 195, 247, 0.3); }
 .timeline-item:nth-child(4) .timeline-dot { animation-delay: 1.5s; }
-.timeline-item:nth-child(5) .timeline-dot { animation-delay: 2s; background: var(--color-lavender); box-shadow: 0 0 0 3px var(--color-lavender), 0 0 12px rgba(199, 184, 234, 0.3); }
+.timeline-item:nth-child(5) .timeline-dot { animation-delay: 2s; background: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent), 0 0 12px rgba(108, 99, 255, 0.3); }
 
 .timeline-year {
   font-family: var(--font-mono);

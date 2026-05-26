@@ -12,7 +12,7 @@
   left: -8%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(199, 184, 234, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   animation: bio-float 12s ease-in-out infinite;
   pointer-events: none;
@@ -31,7 +31,7 @@
 }
 
 .contact-form-container {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(17, 24, 39, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: var(--spacing-3xl);
@@ -68,7 +68,7 @@
   font-family: inherit;
   font-size: 15px;
   color: var(--color-text);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(15, 40, 71, 0.5);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -78,7 +78,7 @@
   outline: none;
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 3px rgba(126, 206, 193, 0.15);
-  background: white;
+  background: rgba(15, 40, 71, 0.7);
 }
 
 .form-group input::placeholder,

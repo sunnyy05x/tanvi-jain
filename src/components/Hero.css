@@ -2,11 +2,11 @@
   min-height: 100vh;
   background: linear-gradient(
     135deg,
-    #6B5CA5 0%,
-    #8B7BC7 25%,
-    #7ECEC1 55%,
-    #B8E8D8 80%,
-    #F4A5B8 100%
+    #0A1628 0%,
+    #0F2847 25%,
+    #0D3B66 55%,
+    #1A2332 80%,
+    #0B0F1A 100%
   );
   background-size: 300% 300%;
   animation: gradient-shift 12s ease-in-out infinite;
@@ -17,7 +17,7 @@
   padding-top: 80px;
 }
 
-/* Floating bio-molecules background decoration */
+/* Floating nanoparticle glow */
 .hero::before {
   content: '';
   position: absolute;
@@ -25,7 +25,7 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(199, 184, 234, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   animation: bio-float 8s ease-in-out infinite;
   pointer-events: none;
@@ -38,7 +38,7 @@
   left: -5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(244, 165, 184, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   animation: bio-float 10s ease-in-out infinite 2s;
   pointer-events: none;
@@ -73,21 +73,27 @@
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 212, 170, 0.9);
   letter-spacing: 0.14em;
   margin-bottom: var(--spacing-md);
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 212, 170, 0.1);
   backdrop-filter: blur(8px);
   padding: 6px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 212, 170, 0.25);
+}
+
+.eyebrow.dark {
+  color: var(--color-secondary);
+  background: rgba(0, 212, 170, 0.08);
+  border-color: rgba(0, 212, 170, 0.2);
 }
 
 .hero-title {
   font-size: 42px;
   color: white;
   margin-bottom: var(--spacing-sm);
-  text-shadow: 0 2px 20px rgba(107, 92, 165, 0.3);
+  text-shadow: 0 2px 20px rgba(0, 212, 170, 0.2);
 }
 
 @media (min-width: 1024px) {
@@ -107,7 +113,7 @@
   font-family: var(--font-display);
   font-style: italic;
   font-size: 19px;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
   margin-bottom: var(--spacing-2xl);
   line-height: 1.6;
@@ -131,27 +137,27 @@
 }
 
 .btn-primary {
-  background: white;
-  color: var(--color-primary);
-  box-shadow: 0 4px 15px rgba(107, 92, 165, 0.2);
+  background: var(--color-secondary);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
 }
 
 .btn-primary:hover {
-  background: var(--color-bg);
+  background: var(--color-secondary-light);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(107, 92, 165, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 212, 170, 0.4);
 }
 
 .btn-ghost {
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  color: white;
+  border: 1.5px solid rgba(0, 212, 170, 0.5);
+  color: var(--color-secondary);
   backdrop-filter: blur(8px);
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 212, 170, 0.1);
   transform: translateY(-3px);
-  border-color: white;
+  border-color: var(--color-secondary);
 }
 
 .hero-stats {
@@ -167,10 +173,10 @@
 }
 
 .stat-badge {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(0, 212, 170, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(0, 212, 170, 0.15);
   padding: var(--spacing-md) var(--spacing-sm);
   border-radius: var(--radius-md);
   text-align: center;
@@ -183,7 +189,7 @@
 .stat-badge:nth-child(4) { animation-delay: 3s; }
 
 .stat-badge:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(0, 212, 170, 0.15);
   transform: translateY(-4px);
 }
 
@@ -191,13 +197,13 @@
   font-family: var(--font-mono);
   font-size: 26px;
   font-weight: 500;
-  color: white;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  color: var(--color-secondary);
+  text-shadow: 0 0 12px rgba(0, 212, 170, 0.3);
 }
 
 .stat-label {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-top: 4px;
@@ -216,7 +222,7 @@
   height: 300px;
 }
 
-/* Orbiting molecule dots around profile */
+/* Orbiting electron dots around profile */
 .profile-container::before,
 .profile-container::after {
   content: '';
@@ -231,23 +237,23 @@
 }
 
 .profile-container::before {
-  background: var(--color-accent);
+  background: var(--color-secondary);
   animation: orbit 8s linear infinite;
-  box-shadow: 0 0 12px rgba(244, 165, 184, 0.6);
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.6);
 }
 
 .profile-container::after {
-  background: var(--color-amber);
+  background: var(--color-accent);
   animation: orbit 12s linear infinite reverse;
-  box-shadow: 0 0 12px rgba(245, 208, 142, 0.6);
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
 }
 
 .profile-photo {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 12px 48px rgba(107, 92, 165, 0.25), 0 0 0 8px rgba(255, 255, 255, 0.1);
+  border: 4px solid rgba(0, 212, 170, 0.4);
+  box-shadow: 0 12px 48px rgba(0, 212, 170, 0.15), 0 0 0 8px rgba(0, 212, 170, 0.05);
   overflow: hidden;
   background: var(--color-surface);
   position: relative;
@@ -262,23 +268,23 @@
 
 .expertise-tag {
   position: absolute;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 212, 170, 0.12);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: white;
+  color: var(--color-secondary);
   padding: 6px 16px;
   border-radius: var(--radius-full);
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 212, 170, 0.2);
   z-index: 3;
   transition: all 0.3s ease;
   animation: bio-float 6s ease-in-out infinite;
 }
 
 .expertise-tag:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 212, 170, 0.2);
   transform: scale(1.05);
 }
 
