@@ -73,7 +73,7 @@ const Contact = () => {
               <MapPin className="info-icon" size={24} />
               <div className="info-text">
                 <h4>Office</h4>
-                <p>Room 302, Engineering Block,<br />BML Munjal University, Gurgaon, Haryana</p>
+                <p>Cabin No.2, E2 Block,<br />BML Munjal University</p>
               </div>
             </div>
             

@@ -60,7 +60,7 @@ const Hero = () => {
           >
             <span className="eyebrow">BIOMEDICAL ENGINEERING & BIOTECHNOLOGY</span>
             <h1 className="hero-title">Dr. Tanvi Jain</h1>
-            <p className="hero-subtitle">Assistant Professor & Researcher</p>
+            <p className="hero-subtitle">Assistant Professor (Grade III), School of Engineering and Technology, BML Munjal University</p>
             <p className="hero-tagline">
               "Pioneering research in biomaterials, nanoinformatics, and tissue engineering."
             </p>
@@ -71,8 +71,8 @@ const Hero = () => {
             </div>
 
             <div className="hero-stats">
-              <StatBadge value="14+" label="Years Exp" delay={0.5} />
-              <StatBadge value="2" label="Patents" delay={0.6} />
+              <StatBadge value="12+" label="Years Exp" delay={0.5} />
+              <StatBadge value="3" label="Patents" delay={0.6} />
               <StatBadge value="250+" label="Citations" delay={0.7} />
               <StatBadge value="6" label="PhD Scholars" delay={0.8} />
             </div>

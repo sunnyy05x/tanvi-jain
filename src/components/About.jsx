@@ -72,7 +72,7 @@ const About = () => {
         <div className="about-grid">
           <div className="about-main">
             <p className="bio-text">
-              Dedicated researcher and educator focused on biomaterials, tissue engineering, and translational research. Extending expertise to administrative leadership and program development. My research sits at the intersection of molecular biology and engineering design — developing diagnostic tools, biosensors, and tissue constructs that can move from bench to bedside.
+              Dedicated researcher, educator, and academic administrator with expertise in Biomedical Engineering, Nanobiotechnology, Tissue Engineering, Stem Cells, Biomaterials, and Translational Research. Experienced in teaching, curriculum development, research supervision, examination administration, and interdisciplinary scientific innovation. Passionate about integrating biotechnology, biomedical engineering, AI, and nanotechnology for impactful healthcare solutions.
             </p>
             
             <div className="expertise-grid">

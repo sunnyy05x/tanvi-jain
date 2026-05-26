@@ -13,67 +13,59 @@ const Teaching = () => (
     <div className="container">
       <div className="section-head">
         <h2 className="section-title">Teaching</h2>
-        <p className="section-subtitle">Courses designed to build the next generation of biomedical engineers</p>
+        <p className="section-subtitle">Courses & Philosophy</p>
       </div>
-      <div className="teaching-grid">
-        {[
-          { code: 'BME 301', title: 'Introduction to Biomedical Engineering', level: 'UG', sem: 'Fall 2024' },
-          { code: 'BIOT 501', title: 'Advanced Molecular Biology Techniques', level: 'PG', sem: 'Spring 2024' },
-          { code: 'BME 405', title: 'BioMEMS and Microfluidics', level: 'PG', sem: 'Fall 2023' },
-          { code: 'BIOT 601', title: 'Research Methodology', level: 'PG', sem: 'Spring 2023' }
-        ].map((course) => (
-          <div key={course.code} className="course-card">
-            <span className="course-code">{course.code}</span>
-            <h3 className="course-title">{course.title}</h3>
-            <div className="course-meta">
-              <span className="course-tag">{course.level}</span>
-              <span className="course-sem">{course.sem}</span>
-            </div>
-            <a href="#" className="course-link">Course Details →</a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+      
+      <div className="teaching-content" style={{ display: 'grid', gap: 'var(--spacing-2xl)', gridTemplateColumns: '1fr' }}>
+        <div className="teaching-philosophy">
+          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-primary)' }}>Teaching Philosophy</h3>
+          <p className="bio-text" style={{ fontSize: '18px', lineHeight: '1.6', color: 'var(--color-text-muted)' }}>Strong believer in student-centric, interdisciplinary, and research-oriented learning, integrating real-world healthcare challenges with engineering innovation. Focused on outcome-based education, experiential learning, hybrid teaching methodologies, and mentoring students toward scientific research and innovation.</p>
+        </div>
 
-const Lab = () => (
-  <section id="lab" className="lab">
-    <div className="container">
-      <div className="section-head">
-        <h2 className="section-title">The Lab</h2>
-        <p className="section-subtitle">A collaborative space for bold scientific inquiry</p>
-      </div>
-      <div className="lab-cta-container">
-        <div className="cta-card">
-          <h3>Join the Lab</h3>
-          <p>We are always looking for passionate PhD and M.Tech students to join our research efforts.</p>
-          <ul className="cta-positions" style={{ listStyle: 'none', padding: 0, margin: 'var(--spacing-md) 0' }}>
-            <li>• PhD Position: Microfluidics & Cancer Diagnostics</li>
-            <li>• Research Fellow: Tissue Scaffold Fabrication</li>
+        <div className="teaching-courses">
+          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-primary)' }}>Teaching Courses</h3>
+          <ul className="courses-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-sm)', listStyle: 'none', padding: 0, color: 'var(--color-text)', fontSize: '16px' }}>
+            <li>• Introduction to Biotechnology</li>
+            <li>• Bioinstrumentation</li>
+            <li>• Biomedical Instrumentation</li>
+            <li>• Biosensors</li>
+            <li>• Stem Cells and Tissue Engineering</li>
+            <li>• Biomaterials and Biopolymers</li>
+            <li>• Drugs and Pharmaceutical Biotechnology</li>
+            <li>• Environmental Studies</li>
+            <li>• Ethical Issues in Biomedical Engineering</li>
+            <li>• Modern Analytical Techniques in Biotechnology and Biomedical Engineering</li>
+            <li>• Nanobiotechnology and Nanodevices</li>
+            <li>• Drug Delivery Systems</li>
+            <li>• Digital Health Systems</li>
+            <li>• AI in Biomedical Engineering</li>
+            <li>• Computational Systems Biology</li>
+            <li>• Computational Epidemiology and Public Health Analytics</li>
+            <li>• Intelligent Medicine and Nanotechnology Applications</li>
           </ul>
-          <a href="#contact" className="btn btn-primary">Apply Now →</a>
         </div>
       </div>
     </div>
   </section>
 );
 
-const Awards = () => (
+
+
+const AcademicAchievements = () => (
   <section id="awards" className="awards">
     <div className="container">
       <div className="section-head">
-        <h2 className="section-title">Awards & Recognition</h2>
+        <h2 className="section-title">Academic Achievements</h2>
       </div>
       <div className="awards-timeline">
         {[
-          { year: '2021-25', name: 'Teaching Learning Award', body: 'Recognized for innovation in teaching methodology across multiple academic sessions.' },
-          { year: 'Present', name: 'Chief Editor — SRMU COMPASS', body: 'Serving as Chief Editor of the official SRMU Newsletter, driving institutional communication.' },
-          { year: '2015', name: 'Best Paper Presentation', body: 'National Seminar on Recent Advances in Polymer Science and Technology.' },
-          { year: '2014', name: 'Indian Chemical Society Award', body: 'For outstanding research on Sulfated chitin nanoparticles.' }
+          { name: 'Teaching Learning Award', body: 'Recipient of multiple Teaching Learning Awards for innovation in teaching methodology' },
+          { name: 'Indian Chemical Society Award', body: 'Indian Chemical Society Award for research in drug delivery systems' },
+          { name: 'Research Guidance', body: 'Guided B.Tech, M.Tech, and Ph.D. research scholars' },
+          { name: 'Publications & Patents', body: 'Published research papers, patents, and book chapters in reputed journals and publishers including Elsevier, Springer, CRC Press, and Scopus/WoS indexed journals' }
         ].map((award, i) => (
           <div key={i} className="award-item">
-            <div className="award-year">{award.year}</div>
+            <div className="award-year">★</div>
             <div className="award-content">
               <h4>{award.name}</h4>
               <p>{award.body}</p>
@@ -94,8 +86,7 @@ function App() {
       <ResearchAreas />
       <Publications />
       <Teaching />
-      <Lab />
-      <Awards />
+      <AcademicAchievements />
       <Contact />
       <footer className="footer">
         <div className="container footer-content">
