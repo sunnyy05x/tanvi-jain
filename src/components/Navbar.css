@@ -31,7 +31,7 @@
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   letter-spacing: -0.01em;
   position: relative;
 }
@@ -74,7 +74,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-primary);
+  color: var(--color-text);
   position: relative;
   padding: 6px 0;
 }
@@ -100,14 +100,14 @@
 
 .mobile-menu-btn {
   display: block;
-  color: var(--color-primary);
+  color: var(--color-text);
   padding: 4px;
   border-radius: var(--radius-sm);
   transition: background 0.2s ease;
 }
 
 .mobile-menu-btn:hover {
-  background: rgba(107, 92, 165, 0.08);
+  background: rgba(0, 212, 170, 0.08);
 }
 
 .navbar:not(.scrolled) .mobile-menu-btn {
@@ -154,12 +154,12 @@
 .close-btn {
   padding: 8px;
   border-radius: var(--radius-sm);
-  color: var(--color-primary);
+  color: var(--color-text);
   transition: all 0.2s ease;
 }
 
 .close-btn:hover {
-  background: rgba(107, 92, 165, 0.08);
+  background: rgba(0, 212, 170, 0.08);
   transform: rotate(90deg);
 }
 
@@ -172,7 +172,7 @@
 .drawer-link {
   font-size: 18px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-family: var(--font-display);
   padding: var(--spacing-sm) 0;
   border-bottom: 1px solid var(--color-border);

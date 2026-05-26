@@ -31,7 +31,7 @@ const Contact = () => {
                 <p>Thank you for reaching out. Dr. Tanvi Jain will get back to you soon.</p>
                 <button 
                   className="btn btn-ghost" 
-                  style={{ color: 'var(--color-primary)', borderColor: 'var(--color-primary)' }}
+                  style={{ color: 'var(--color-secondary)', borderColor: 'var(--color-secondary)' }}
                   onClick={() => setFormState('idle')}
                 >
                   Send another message

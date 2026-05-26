@@ -79,7 +79,8 @@
   font-family: var(--font-body);
   font-size: 17px;
   margin-bottom: var(--spacing-md);
-  color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 .course-meta {
@@ -101,7 +102,7 @@
 .course-link {
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -109,7 +110,7 @@
 }
 
 .course-link:hover {
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
   transform: translateX(4px);
 }
 
@@ -254,7 +255,7 @@
   font-family: var(--font-body);
   font-size: 17px;
   margin-bottom: 4px;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .award-content p {

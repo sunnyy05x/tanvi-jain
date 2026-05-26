@@ -36,7 +36,7 @@
 .section-title {
   font-size: 32px;
   margin-top: 12px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-sky) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -76,7 +76,7 @@
 
 .expertise-pill {
   background: linear-gradient(135deg, rgba(0, 212, 170, 0.2) 0%, rgba(108, 99, 255, 0.15) 100%);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   padding: 8px 18px;
   border-radius: var(--radius-full);
   font-size: 13px;
@@ -118,8 +118,8 @@
 }
 
 .logo-placeholder:hover {
-  color: var(--color-primary);
-  background: rgba(126, 206, 193, 0.12);
+  color: var(--color-secondary);
+  background: rgba(0, 212, 170, 0.12);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }

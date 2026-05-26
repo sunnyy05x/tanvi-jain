@@ -18,12 +18,12 @@ const Teaching = () => (
       
       <div className="teaching-content" style={{ display: 'grid', gap: 'var(--spacing-2xl)', gridTemplateColumns: '1fr' }}>
         <div className="teaching-philosophy">
-          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-primary)' }}>Teaching Philosophy</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-secondary)' }}>Teaching Philosophy</h3>
           <p className="bio-text" style={{ fontSize: '18px', lineHeight: '1.6', color: 'var(--color-text-muted)' }}>Strong believer in student-centric, interdisciplinary, and research-oriented learning, integrating real-world healthcare challenges with engineering innovation. Focused on outcome-based education, experiential learning, hybrid teaching methodologies, and mentoring students toward scientific research and innovation.</p>
         </div>
 
         <div className="teaching-courses">
-          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-primary)' }}>Teaching Courses</h3>
+          <h3 style={{ fontSize: '24px', marginBottom: 'var(--spacing-md)', color: 'var(--color-secondary)' }}>Teaching Courses</h3>
           <ul className="courses-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-sm)', listStyle: 'none', padding: 0, color: 'var(--color-text)', fontSize: '16px' }}>
             <li>• Introduction to Biotechnology</li>
             <li>• Bioinstrumentation</li>

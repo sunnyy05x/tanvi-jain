@@ -135,7 +135,7 @@ const Publications = () => {
     <section id="publications" className="publications">
       <DnaHelix 
         className="publications-watermark" 
-        strokeColor="#C7B8EA" 
+        strokeColor="var(--color-secondary)" 
         opacity={0.15} 
         width="800px" 
         height="1200px" 

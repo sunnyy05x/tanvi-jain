@@ -55,7 +55,7 @@
 .form-group label {
   font-size: 13px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   letter-spacing: 0.02em;
 }
 
@@ -127,14 +127,14 @@
 }
 
 .info-item:hover {
-  background: rgba(126, 206, 193, 0.06);
+  background: rgba(0, 212, 170, 0.06);
 }
 
 .info-icon {
   color: var(--color-secondary);
   flex-shrink: 0;
   padding: 8px;
-  background: rgba(126, 206, 193, 0.1);
+  background: rgba(0, 212, 170, 0.1);
   border-radius: var(--radius-sm);
 }
 
@@ -142,7 +142,7 @@
   font-family: var(--font-body);
   font-size: 17px;
   margin-bottom: 4px;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .info-text p {
@@ -157,7 +157,7 @@
 }
 
 .info-text a:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary-light);
 }
 
 .social-links {
@@ -171,7 +171,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 500;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
@@ -181,7 +181,7 @@
 
 .social-link:hover {
   color: var(--color-secondary);
-  background: rgba(126, 206, 193, 0.06);
-  border-color: rgba(126, 206, 193, 0.2);
+  background: rgba(0, 212, 170, 0.06);
+  border-color: rgba(0, 212, 170, 0.2);
   transform: translateX(4px);
 }

@@ -102,7 +102,7 @@
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
   margin-bottom: 4px;
   line-height: 1.4;
 }
@@ -113,7 +113,7 @@
 }
 
 .pub-authors strong {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: 600;
 }
 
@@ -157,8 +157,8 @@
 }
 
 .doi-link:hover {
-  color: var(--color-primary);
-  background: rgba(107, 92, 165, 0.06);
+  color: var(--color-secondary);
+  background: rgba(0, 212, 170, 0.06);
 }
 
 .pub-actions {
@@ -179,14 +179,14 @@
 }
 
 .ghost-primary {
-  border: 1.5px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
 }
 
 .ghost-primary:hover {
-  background: var(--color-primary);
+  background: var(--color-accent);
   color: white;
-  box-shadow: 0 4px 16px rgba(107, 92, 165, 0.25);
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.25);
   transform: translateY(-2px);
 }
 
