@@ -24,7 +24,7 @@ const ResearchAreas = () => {
   const areas = [
     {
       icon: Microscope,
-      title: 'Patents Granted (2)',
+      title: 'Patents Granted (3)',
       description: 'AI Based Electroactive Polymer Biosensor Device and Nanolipoidal Systems for Skin Cancer.'
     },
     {
