@@ -50,7 +50,7 @@ const PublicationRow = ({ year, title, authors, journal, citations, doi, delay }
 const Publications = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   
-  const filters = ['All', 'Journal Articles', 'Conference Proceedings', 'Book Chapters', 'Patents'];
+  const filters = ['All', 'Journal Articles'];
 
   const allPublications = [
     {
