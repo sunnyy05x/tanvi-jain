@@ -5,13 +5,38 @@ import './Contact.css';
 const Contact = () => {
   const [formState, setFormState] = useState('idle'); // idle, loading, success, error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('loading');
-    // Simulate API call
-    setTimeout(() => {
-      setFormState('success');
-    }, 1500);
+    
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const subject = e.target.subject.value;
+    const message = e.target.message.value;
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/tanvijain87@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message
+        })
+      });
+      
+      if (response.ok) {
+        setFormState('success');
+      } else {
+        setFormState('error');
+      }
+    } catch (error) {
+      setFormState('error');
+    }
   };
 
   return (
@@ -41,15 +66,15 @@ const Contact = () => {
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
-                  <input type="text" id="name" required placeholder="Dr. John Doe" />
+                  <input type="text" id="name" name="name" required placeholder="Dr. John Doe" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" required placeholder="john@university.edu" />
+                  <input type="email" id="email" name="email" required placeholder="john@university.edu" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="subject">Subject</label>
-                  <select id="subject" required>
+                  <select id="subject" name="subject" required>
                     <option value="">Select a subject</option>
                     <option value="Collaboration">Research Collaboration</option>
                     <option value="Student Inquiry">Student Inquiry (PhD/M.Tech)</option>
@@ -59,10 +84,10 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
-                  <textarea id="message" rows="5" required placeholder="How can I help you?"></textarea>
+                  <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary full-width" disabled={formState === 'loading'}>
-                  {formState === 'loading' ? 'Sending...' : 'Send Message'}
+                  {formState === 'loading' ? 'Sending...' : formState === 'error' ? 'Error. Try Again?' : 'Send Message'}
                 </button>
               </form>
             )}
