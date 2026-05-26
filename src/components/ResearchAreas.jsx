@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Microscope, Dna, Users } from 'lucide-react';
+import { Target, Layers, Activity, Heart, Brain } from 'lucide-react';
 import './ResearchAreas.css';
 
 const AreaCard = ({ icon: Icon, title, description, delay }) => (
@@ -23,19 +23,29 @@ const AreaCard = ({ icon: Icon, title, description, delay }) => (
 const ResearchAreas = () => {
   const areas = [
     {
-      icon: Microscope,
-      title: 'Patents Granted (3)',
-      description: 'AI Based Electroactive Polymer Biosensor Device and Nanolipoidal Systems for Skin Cancer.'
+      icon: Target,
+      title: 'Smart Drug Delivery Systems',
+      description: 'Developing targeted and controlled release systems, including nanolipoidal carriers, for improved therapeutic efficacy.'
     },
     {
-      icon: Dna,
-      title: 'Biomaterials & Tissue Eng.',
-      description: 'Working on biopolymers, wound healing, and advanced scaffolds.'
+      icon: Layers,
+      title: 'Chitosan and Biopolymeric Nanomaterials',
+      description: 'Synthesizing chitosan-based nanoparticles and biopolymer composites for tissue engineering and medical applications.'
     },
     {
-      icon: Users,
-      title: 'Academic Leadership',
-      description: 'Guided 24 B.Tech, 4 M.Tech projects, and 6 PhD scholars.'
+      icon: Activity,
+      title: 'Biosensors and Biomedical Devices',
+      description: 'Designing electroactive polymer biosensor devices and intelligent diagnostic tools for healthcare monitoring.'
+    },
+    {
+      icon: Heart,
+      title: 'Cancer Therapeutics and Regenerative Medicine',
+      description: 'Researching stem cells, biomaterial scaffolds, and advanced therapeutics for cancer treatment and wound healing.'
+    },
+    {
+      icon: Brain,
+      title: 'AI in Healthcare and Biomedical Applications',
+      description: 'Integrating artificial intelligence, machine learning, and nanoinformatics for predictive medicine and intelligent healthcare.'
     }
   ];
 
@@ -50,7 +60,7 @@ const ResearchAreas = () => {
       
       <div className="container">
         <div className="section-head text-center">
-          <h2 className="section-title">Research Focus</h2>
+          <h2 className="section-title">Research Interests</h2>
           <p className="section-subtitle">Five converging fields that define the lab's scientific identity</p>
         </div>
 
